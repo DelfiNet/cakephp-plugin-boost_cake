@@ -228,7 +228,7 @@ class BoostCakeFormHelper extends FormHelper {
 					$option = $match[1] . preg_replace('/<label.*?>/', ' ', $option);
 					$option = preg_replace('/(<label.*?)(>)/', '$1 class="' . $class . '"$2', $option);
 				}
-				$selectOptions[$key] = $option;
+				$selectOptions[$key] = '<div class="'. $this->_inputOptions['checkboxDiv'] .'">'.$option.'</div>';
 			}
 		}
 
